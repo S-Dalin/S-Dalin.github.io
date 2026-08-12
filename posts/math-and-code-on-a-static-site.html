@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math and code on a hand-written static site — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- KaTeX: only needed on posts with equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]});"></script>
+</head>
+<body>
+
+<header class="site">
+  <a class="site-name plain" href="../index.html">your.name / research</a>
+  <nav>
+    <a href="../index.html">home</a>
+    <a href="../blog.html">blog</a>
+    <a href="../projects.html">projects</a>
+    <a href="../publications.html">publications</a>
+    <a href="../about.html">about</a>
+  </nav>
+</header>
+
+<main>
+  <article class="post-body">
+    <h1>Math and code on a hand-written static site</h1>
+    <div class="meta">
+      <div class="row"><span class="k">date</span><span class="v">2026-07-05</span></div>
+      <div class="row"><span class="k">tags</span><span class="v">tutorials</span></div>
+      <div class="row"><span class="k">status</span><span class="v">reference</span></div>
+    </div>
+
+    <p class="lede">You don't need a site generator to publish research notes.
+    This whole site is hand-written HTML; equations come from KaTeX, loaded
+    from a CDN only on pages that need them.</p>
+
+    <h2>Equations with KaTeX</h2>
+    <p>Add three lines to the page head (see the source of this post), then write
+    LaTeX inline — like the loss $L(\theta) = \frac{1}{n}\sum_{i=1}^{n} \ell(f_\theta(x_i), y_i)$
+    — or as display math:</p>
+
+    $$\nabla_\theta L = \frac{1}{n} \sum_{i=1}^{n} \nabla_\theta \, \ell(f_\theta(x_i), y_i)$$
+
+    <h2>Code blocks</h2>
+    <p>Plain <code>&lt;pre&gt;&lt;code&gt;</code> with a monospace font is honest
+    and fast. If you later want syntax highlighting, add a tiny highlighter
+    (e.g. highlight.js) the same way — one CDN link, only on pages with code:</p>
+
+    <pre><code>def log_run(question, setup):
+    """Log before you look at the results."""
+    with open("log.md", "a") as f:
+        f.write(f"## Question\n{question}\n\n## Setup\n{setup}\n")</code></pre>
+
+    <h2>Why not a framework?</h2>
+    <p>Because the site is the notebook. Every page is one file you can read,
+    diff, and host anywhere static files are served — GitHub Pages, a university
+    server, a Raspberry Pi. No build step, no dependencies, nothing to break
+    while you're busy doing actual research.</p>
+
+    <hr>
+    <p class="meta"><a href="../blog.html">&larr; back to all posts</a></p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="cols">
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://github.com/yourusername">GitHub</a></li>
+        <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+        <li><a href="https://orcid.org/">ORCID</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">&copy; <span id="year">2026</span> Your Name · hand-written HTML/CSS, no trackers</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

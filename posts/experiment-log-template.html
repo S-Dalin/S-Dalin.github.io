@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>An experiment log that survives your own forgetfulness — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <a class="site-name plain" href="../index.html">your.name / research</a>
+  <nav>
+    <a href="../index.html">home</a>
+    <a href="../blog.html">blog</a>
+    <a href="../projects.html">projects</a>
+    <a href="../publications.html">publications</a>
+    <a href="../about.html">about</a>
+  </nav>
+</header>
+
+<main>
+  <article class="post-body">
+    <h1>An experiment log that survives your own forgetfulness</h1>
+    <div class="meta">
+      <div class="row"><span class="k">date</span><span class="v">2026-07-28</span></div>
+      <div class="row"><span class="k">tags</span><span class="v">research, experiments</span></div>
+      <div class="row"><span class="k">status</span><span class="v">template</span></div>
+    </div>
+
+    <p class="lede">Six months from now, the person trying to reproduce your result
+    is you — and you will have forgotten everything. Write the log for that person.</p>
+
+    <h2>The template</h2>
+    <p>I keep one log per experiment run, in plain Markdown next to the code.
+    It has five sections, in this order:</p>
+
+    <pre><code># Experiment: &lt;short name&gt; — &lt;date&gt;
+
+## Question
+What am I trying to find out, in one sentence?
+
+## Setup
+- code version:    &lt;git commit hash&gt;
+- data version:    &lt;dataset + hash or date&gt;
+- config:          &lt;link to config file&gt;
+- environment:     &lt;machine, library versions&gt;
+- random seed:     &lt;seed&gt;
+
+## Result
+The numbers, verbatim. Plots as files, linked.
+
+## Surprise
+What did NOT match my expectation? (Most valuable section.)
+
+## Next
+The single follow-up this result suggests.</code></pre>
+
+    <h2>Why these five</h2>
+    <p><strong>Question</strong> forces you to admit what the run was actually for —
+    this kills most "let me just try" runs that waste a week. <strong>Setup</strong>
+    is the reproducibility contract: if any line is missing, the run doesn't count.
+    <strong>Surprise</strong> is where the science lives; expected results confirm,
+    unexpected ones teach.</p>
+
+    <h2>The one rule</h2>
+    <p>Log before you look at the results. Write the Question and Setup sections
+    <em>first</em>, run the experiment, then fill in the rest. It's the only way
+    to keep yourself honest about what you predicted.</p>
+
+    <hr>
+    <p class="meta"><a href="../blog.html">&larr; back to all posts</a></p>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="cols">
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://github.com/yourusername">GitHub</a></li>
+        <li><a href="https://scholar.google.com/">Google Scholar</a></li>
+        <li><a href="https://orcid.org/">ORCID</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:you@example.com">you@example.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="fine">&copy; <span id="year">2026</span> Your Name · hand-written HTML/CSS, no trackers</p>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
